@@ -1,0 +1,22 @@
+GIT_URI="https://github.com/EionRobb/funyahoo-plusplus.git"
+inherit git
+
+NAME="pidgin-funyahoo-plusplus"
+VERSION=0
+RELEASE=0.1.20160902gitfe2a944
+CATEGORY="Net"
+SUMMARY="Pidgin protocol plugin for Yahoo (2016)"
+DESCRIPTION="Pidgin/libpurple plugin for the new (2016) Yahoo Messenger protocol"
+HOMEPAGE="https://github.com/EionRobb/funyahoo-plusplus"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake OS=Cygwin
+}
+
+src_install() {
+	cd ${B}
+	exeinto /usr/lib/purple-2
+	newexe libyahoo-plusplus.so cygyahoo-plusplus.dll
+}
