@@ -3,7 +3,7 @@ inherit git
 
 NAME="pidgin-funyahoo-plusplus"
 VERSION=0
-RELEASE=0.1.20160902gitfe2a944
+RELEASE=0.2.20161005git26d87c5
 CATEGORY="Net"
 SUMMARY="Pidgin protocol plugin for Yahoo (2016)"
 DESCRIPTION="Pidgin/libpurple plugin for the new (2016) Yahoo Messenger protocol"
