@@ -3,7 +3,7 @@ inherit git
 
 NAME="pidgin-funyahoo-plusplus"
 VERSION=0
-RELEASE=0.3.20170310git
+RELEASE=0.4.20180214git
 CATEGORY="Net"
 SUMMARY="Pidgin protocol plugin for Yahoo (2016)"
 DESCRIPTION="Pidgin/libpurple plugin for the new (2016) Yahoo Messenger protocol"
@@ -12,7 +12,7 @@ HOMEPAGE="https://github.com/EionRobb/funyahoo-plusplus"
 src_compile() {
 	lndirs
 	cd ${B}
-	cygmake OS=Cygwin
+	cygmake OS=Cygwin LDFLAGS=-lz
 }
 
 src_install() {
